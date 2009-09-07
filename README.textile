@@ -1,0 +1,24 @@
+*in_the_wee_small_hours* is a simple "Sinatra":http://www.sinatrarb.com/ app to log thoughts, rants or ideas--basically, anything that can be expressed with words--one might have "In the Wee Small Hours of the Morning" (a track on Frank Sinatra's album, ??In the Wee Small Hours??).
+
+In other words, a digital notebook of sorts.
+
+h2. Running The App
+
+In addition to "Ruby":http://www.ruby-lang.org/, you'll need the following gems:
+
+* "Sinatra":http://www.sinatrarb.com/
+* "RedCloth":http://redcloth.org/
+
+With these installed, run the following in your console:
+
+bc. $ ruby in_the_wee_small_hours.rb
+
+You will then be able to access "http://localhost:4567/":http://localhost:4567/.
+
+h2. Adding Entries
+
+Entries are Textile files in the @/entries/@ directory, which will be converted to HTML for display using the "RedCloth":http://redcloth.org/ gem.
+
+The files *need to be named with the following convention:* @YYYYMMDD_HHMMSS.textile@. This is your entry's timestamp.
+
+All such files will be picked up by the app and listed in reverse chronological order when you load the index page in your browser.

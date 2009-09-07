@@ -1,0 +1,8 @@
+<% @entries_grouped_by_month.each do |group| %>
+  <h2><%= group[:month].strftime('%B %Y') %></h2>
+  <ul>
+    <% group[:entries].each do |article| %>
+      <li><a href="<%= article[:slug] %>"><%= format_datetime(article[:datetime]) %></a></li>
+    <% end %>
+  </ul>
+<% end %>
