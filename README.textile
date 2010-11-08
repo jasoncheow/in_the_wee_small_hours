@@ -21,4 +21,6 @@ Entries are Textile files in the @/entries/@ directory, which will be converted 
 
 The files *need to be named with the following convention:* @YYYYMMDD_HHMMSS.textile@. This is your entry's timestamp.
 
+There is a built-in script that you can use to create a new entry with the current timestamp: @ruby script/new@.
+
 All such files will be picked up by the app and listed in reverse chronological order when you load the index page in your browser.

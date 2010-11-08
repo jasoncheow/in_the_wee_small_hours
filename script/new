@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+file = "entries/#{Time.now.strftime("%Y%m%d_%H%M%S")}.textile"
+FileUtils.touch file
+puts "Created new entry:"
+puts "  ./#{file}"
+puts ""
