@@ -35,9 +35,8 @@ end
 get '/:slug' do
   if params[:slug] =~ TIMESTAMP_REGEXP and File.exists? "entries/#{params[:slug]}.textile"
     @datetime = Time.local($1, $2, $3, $4, $5, $6)
-    content = RedCloth.new(File.read("entries/#{params[:slug]}.textile")).to_html
-    content += "<hr /><p><a href=\"/\">Back</a></p>"
-    erb content
+    @entry = :"../entries/#{params[:slug]}"
+    erb :entry
   else
     raise Sinatra::NotFound
   end
