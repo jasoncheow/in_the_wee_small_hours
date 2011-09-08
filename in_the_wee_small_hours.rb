@@ -1,6 +1,7 @@
 require 'rubygems'
-require 'sinatra'
-require 'redcloth'
+require 'bundler'
+
+Bundler.require
 
 TIMESTAMP_REGEXP = /(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})(\d{2})/
 

@@ -9,7 +9,11 @@ In addition to "Ruby":http://www.ruby-lang.org/, you'll need the following gems:
 * "Sinatra":http://www.sinatrarb.com/
 * "RedCloth":http://redcloth.org/
 
-With these installed, run the following in your console:
+You can install them using Bundler:
+
+bc. $ bundle install
+
+Next, run the following in your console:
 
 bc. $ ruby in_the_wee_small_hours.rb
 
