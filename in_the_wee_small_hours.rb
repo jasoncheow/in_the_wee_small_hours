@@ -12,7 +12,7 @@ helpers do
 end
 
 get '/' do
-  slugs = Dir['entries/*.textile'].collect {|file| file.gsub(/(^entries\/|\.textile$)/, '')}
+  slugs = Dir['entries/*.textile'].collect {|file| file.gsub(/(^entries\/|\.textile$)/, '')}.sort
   @entries = slugs.inject([]) do |entries, slug|
     if slug =~ TIMESTAMP_REGEXP
       entries << {:slug => slug, :datetime => Time.local($1, $2, $3, $4, $5, $6)}
